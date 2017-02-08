@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { NameListService } from '../shared/components/name-list/name-list.service';
+import { UserService } from '../shared/services/user.service';
 
 @NgModule({
   imports: [CommonModule, HomeRoutingModule, SharedModule],
-  declarations: [HomeComponent],
-  exports: [HomeComponent],
-  providers: [NameListService]
+  declarations: [DashboardComponent],
+  exports: [DashboardComponent],
+  providers: [UserService]
 })
 export class HomeModule { }
