@@ -11,15 +11,15 @@ export class UserService {
     }
 
     getUser(id: number){
-        return this.http.get('api/users/' + id, this.jwt()).map((response: Response) => response.json());
+        return this.http.get('/api/users/' + id, this.jwt()).map((response: Response) => response.json());
     }
 
     createUser(user: User){
-        return this.http.post('api/users/', user,this.jwt()).map((response: Response) => response.json());
+        return this.http.post('/api/users', user,this.jwt()).map((response: Response) => response.json());
     }
 
     deleteUser(id: number) {
-        return this.http.delete('api/users/' + id, this.jwt()).map((response: Response) => response.json());
+        return this.http.delete('/api/users' + id, this.jwt()).map((response: Response) => response.json());
     }
 
     private jwt() {

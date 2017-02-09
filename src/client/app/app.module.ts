@@ -8,10 +8,6 @@ import { HomeModule } from './home/home.module';
 import { UserModule }  from './user/user.module';
 import { SharedModule } from './shared/shared.module';
 
- //fake backend 
-import { fakeBackendProvider } from './shared/helpers/fake-backend';
-import { MockBackend, MockConnection } from '@angular/http/testing';
-import { BaseRequestOptions } from '@angular/http';
 
 
 @NgModule({
@@ -20,11 +16,7 @@ import { BaseRequestOptions } from '@angular/http';
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>'
-  },
-     fakeBackendProvider,
-        MockBackend,
-        MockConnection,
-        BaseRequestOptions
+  }
   ],
   bootstrap: [AppComponent]
 

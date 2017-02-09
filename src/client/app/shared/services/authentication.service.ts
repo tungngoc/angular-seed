@@ -9,9 +9,9 @@ import { User } from '../models/user';
 export class AuthenticationService {
     constructor(private http: Http) {}
 
-    login(userName: string, password: string) {
+    login(username: string, password: string) {
         
-        return this.http.post('/api/authenticate', JSON.stringify({userName: userName, password: password}))
+        return this.http.post('/api/authenticate', JSON.stringify({username: username, password: password}))
         .map((response: Response) => {
             let user = response.json();
             if(user && user.token){
