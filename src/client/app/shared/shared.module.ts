@@ -10,15 +10,16 @@ import { AlertComponent} from './directives/alert/alert.component';
 import { fakeBackendProvider } from '../shared/helpers/fake-backend';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
+import { MdlModule } from 'angular2-mdl';
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MdlModule],
   declarations: [AlertComponent],
   exports: [AlertComponent,
-    CommonModule, FormsModule, RouterModule]
+    CommonModule, FormsModule, RouterModule, MdlModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

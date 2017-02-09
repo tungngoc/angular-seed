@@ -1,3 +1,5 @@
+
+<!--
 <div class="col-md-6 col-md-offset-3">
     <h1>Hi {{currentUser.firstName}}!</h1>
     <p>You're logged in with Angular 2!!</p>
@@ -9,4 +11,27 @@
         </li>
     </ul>
     <p><a [routerLink]="['/login']">Logout</a></p>
-</div>
+</div>-->
+
+<mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed>
+  <mdl-layout-header>
+    <mdl-layout-header-row>
+      <mdl-layout-title>hello</mdl-layout-title>
+      <mdl-layout-spacer></mdl-layout-spacer>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link">Link</a>
+      </nav>
+    </mdl-layout-header-row>
+  </mdl-layout-header>
+  <mdl-layout-drawer>
+    <mdl-layout-title>Title</mdl-layout-title>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link">Link</a>
+    </nav>
+  </mdl-layout-drawer>
+  <mdl-layout-content class="demo-content">
+
+
+  </mdl-layout-content>
+</mdl-layout>
